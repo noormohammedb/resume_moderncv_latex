@@ -53,7 +53,10 @@
 \begin{document}
 \makecvtitle
 \vspace*{-12mm}
-\begin{center}\textbf{Rust Developer}
+% \begin{center}\textbf{Rust Developer}
+% \end{center}
+\begin{center}
+  \textbf{Rust Trading Infrastructure Engineer}
 \end{center}
 \begin{center}
   \begin{tabular}{ c c c }
@@ -74,8 +77,8 @@
 
 \section{Summary}
 {
-  I'm a Backend and systems engineer with 3 years of experience specializing in Rust, low-level systems and  blockchain development. Proven experience designing secure systems at the protocol level, integrated Intel SGX attestation, and building robust infrastructure using gRPC, Rust FFI, and AES encryption. Developed production-grade tooling like detee-cli and contributed to trusted execution environments through projects like detee-sgx and Occlum runtime extensions. Strong foundation in Web3, Polkadot SDK, and full-stack development (MERN), with a track record of winning blockchain hackathons and delivering scalable backend systems.
-
+  % I'm a Backend and systems engineer with 3 years of experience specializing in Rust, low-level systems and  blockchain development. Proven experience designing secure systems at the protocol level, integrated Intel SGX attestation, and building robust infrastructure using gRPC, Rust FFI, and AES encryption. Developed production-grade tooling like detee-cli and contributed to trusted execution environments through projects like detee-sgx and Occlum runtime extensions. Strong foundation in Web3, Polkadot SDK, and full-stack development (MERN), with a track record of winning blockchain hackathons and delivering scalable backend systems.
+  Backend and systems engineer with experience building low-latency trading infrastructure, exchange connectivity systems, and high-performance backend services in Rust. Contributed to the migration of a multi-exchange crypto trading platform from Python to Rust, including exchange adapters, protocol serialization, and inter-process communication optimizations. Experienced with WebSocket and FIX-based exchange connectivity, Protocol Buffers, Tokio, gRPC, and distributed systems. Strong understanding of market microstructure, smart order routing, blockchain protocols, and cryptographic signing systems. Previously worked on Intel SGX remote attestation, custom X.509 certificate validation, Rust FFI, and confidential computing infrastructure.
 }
 % {I am a passionate blockchain developer with over two years of
 %   experience in full-stack development. Recently graduated from the
@@ -86,13 +89,69 @@
 %   space with a proven track record of winning hackathons with Ethereum
 % blockchain technologies.}
 
+% \section{Skills}
+% {Rust -
+% ActixWeb - TokioAxum - RustTls - Tonic - Tmux -  Nginx - Git - GRPC - SSH - VIM - Certbot - IPFS - AWS - Linux - DevOps - Docker - GraphQL}
+
 \section{Skills}
-{Rust -
-ActixWeb - TokioAxum - RustTls - Tonic - Polkadot SDK - TypeScript - Node.js - Tmux -  Nginx - Git - GRPC - SSH - VIM - Certbot - IPFS - AWS - Linux - DevOps - Docker - GraphQL}
+
+{
+  \textbf{Languages:}
+  Rust, Python, Golang, TypeScript, JavaScript
+
+  \vspace{2mm}
+
+  \textbf{Trading Infrastructure:}
+  Exchange Connectivity, FIX Protocol, Smart Order Routing, Order Management Systems, WebSocket APIs, Protocol Buffers
+
+  \vspace{2mm}
+
+  \textbf{Rust Ecosystem:}
+  Tokio, Tonic, Prost, Axum, Rustls, Serde, Tokio-Tungstenite, Reqwest, DashMap, Moka
+
+  \vspace{2mm}
+
+  \textbf{Systems:}
+  Linux, TCP/IP, Unix Domain Sockets, gRPC, FFI, Docker, Nginx
+
+  \vspace{2mm}
+
+  \textbf{Blockchain:}
+  Ethereum, Hyperliquid, Polkadot SDK, EIP-712, Cryptographic Signing, AWS KMS
+}
 
 \section{Professional Experience}
+% \customcventry{10/2025 ‐
+% now }{{\color{blue}\href{https://coinroutes.com/en/}{(Coinroutes)}}}{Rust Developer,}{Remote}{} {{
+%     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+%       \item Core team of {\color{blue}\href{https://gitea.detee.cloud/general/detee-sgx}{detee-sgx}}, focusing on SGX enclave interactions, attestation, and protocol-level engineering..
+%       \item foo bar koo.
+%       \item foo bar koo.
+%       \item foo bar koo.
+%       \item foo bar koo.
+%       \item foo bar koo.
+%       \item foo bar koo.
+%     \end{itemize}
+% }}
+\customcventry{10/2025 ‐
+now }{{\color{blue}\href{https://coinroutes.com/en/}{(CoinRoutes)}}}{Rust Trading Infrastructure Engineer,}{Remote}{} {{
+    \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+      \item Contributed to the migration of a multi-exchange order gateway from Python to Rust as part of a team modernizing core trading infrastructure.
+      \item Developed and maintained exchange adapters in Rust using Tokio, Reqwest, and Tokio-Tungstenite for centralized and decentralized exchanges including Hyperliquid.
+      \item Designed strongly typed Rust data models and serialization layers using Serde for REST and WebSocket APIs, replacing dynamically typed Python implementations.
+      \item Helped replace TCP/WebSocket JSON communication between internal trading services with Unix Domain Sockets and Protocol Buffers, significantly reducing serialization and networking overhead.
+      \item Implemented exchange connectivity features including authentication, request validation, subscription management, reconnection handling, and proxy-aware WebSocket networking.
+      \item Added HTTP CONNECT proxy support for WebSocket connections, enabling scalable upstream connectivity and rate-limit management across exchange integrations.
+      \item Contributed to reusable exchange abstractions using Rust traits and generics, eliminating inheritance-heavy adapter implementations previously used in Python.
+      \item Owned development and maintenance of the Hyperliquid exchange adapter, including REST and WebSocket protocol integration, custom message handling, and production testing.
+      \item Built middleware services enabling Web2-style API access to Hyperliquid by handling transaction resigning, API-key authentication, vault management, subscription multiplexing, and upstream connection pooling.
+      \item Worked with Protocol Buffers, gRPC, and Rust-Python interoperability technologies used throughout trading infrastructure systems.
+    \end{itemize}
+}}
+\clearpage
+
 \customcventry{09/2024 ‐
-now }{{\color{blue}\href{https://detee.ltd/}{(DeTee)}}}{Rust Developer,}{Remote}{} {{
+09/2025}{{\color{blue}\href{https://detee.ltd/}{(DeTee)}}}{Rust Developer,}{Remote}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
       \item Core development of {\color{blue}\href{https://gitea.detee.cloud/general/detee-sgx}{detee-sgx}}, focusing on SGX enclave interactions, attestation, and protocol-level engineering..
       \item Extended RustTls for custom X.509 certificate validation with embedded Intel SGX quote verification using a custom OID for remote attestation over TLS.
@@ -142,7 +201,7 @@ Developer,}{Banglore, IN}{} {{
     \end{itemize}
 }}
 
-\clearpage
+% \clearpage
 
 \customcventry{11/2020 ‐ 04/2021}{\color{blue}(MediSheets)}{Backend
 Developer,}{Kerala, IN}{} {{
@@ -179,7 +238,7 @@ Deployment,}{Kerala , IN}{} {{
     \end{itemize}
 }}
 
-% \clearpage
+\clearpage
 
 \section{Personal Projects}
 \begin{itemize}[label=\textbullet]
