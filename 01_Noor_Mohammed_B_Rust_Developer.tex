@@ -7,12 +7,12 @@
 \usepackage[scale=0.915]{geometry}
 \usepackage{import}
 \usepackage{multicol}
-\usepackage{import}
+% \usepackage{import}
 \usepackage{enumitem}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 \usepackage{microtype}
-\usepackage{lipsum}
+% \usepackage{lipsum}
 \usepackage{helvet}
 
 \name{}{Noor Mohammed B}
@@ -60,8 +60,8 @@
 \end{center}
 \begin{center}
   \begin{tabular}{ c c c }
-    \faMobile\enspace +91 9746580702
-    % \faMobile\enspace +971 509948028
+    % \faMobile\enspace +91 9746580702
+    \faMobile\enspace +971 509948028
     &
     \enspace noormohammedb@protonmail.com
     &
@@ -78,7 +78,7 @@
 \section{Summary}
 {
   % I'm a Backend and systems engineer with 3 years of experience specializing in Rust, low-level systems and  blockchain development. Proven experience designing secure systems at the protocol level, integrated Intel SGX attestation, and building robust infrastructure using gRPC, Rust FFI, and AES encryption. Developed production-grade tooling like detee-cli and contributed to trusted execution environments through projects like detee-sgx and Occlum runtime extensions. Strong foundation in Web3, Polkadot SDK, and full-stack development (MERN), with a track record of winning blockchain hackathons and delivering scalable backend systems.
-  Backend and systems engineer with experience building low-latency trading infrastructure, exchange connectivity systems, and high-performance backend services in Rust. Contributed to the migration of a multi-exchange crypto trading platform from Python to Rust, including exchange adapters, protocol serialization, and inter-process communication optimizations. Experienced with WebSocket and FIX-based exchange connectivity, Protocol Buffers, Tokio, gRPC, and distributed systems. Strong understanding of market microstructure, smart order routing, blockchain protocols, and cryptographic signing systems. Previously worked on Intel SGX remote attestation, custom X.509 certificate validation, Rust FFI, and confidential computing infrastructure.
+  Backend and systems engineer with experience building low-latency trading infrastructure, exchange connectivity systems, and high-performance backend services in Rust. Worked on the migration of a multi-exchange crypto trading platform from Python to Rust, including exchange adapters, protocol serialization, and inter-process communication optimizations. Experienced with WebSocket and FIX-based exchange connectivity, Protocol Buffers, Tokio, gRPC, and distributed systems. Deep understanding of smart order routing, blockchain protocols, and cryptographic signing and encryption systems. Earlier worked on Intel SGX remote attestation, custom X.509 certificate validation, Rust FFI, and confidential computing infrastructure.
 }
 % {I am a passionate blockchain developer with over two years of
 %   experience in full-stack development. Recently graduated from the
@@ -112,12 +112,12 @@
   \vspace{2mm}
 
   \textbf{Systems:}
-  Linux, TCP/IP, Unix Domain Sockets, gRPC, FFI, Docker, Nginx
+  Linux, TCP/IP, Unix Domain Sockets, gRPC, C-FFI, Docker, Nginx
 
   \vspace{2mm}
 
   \textbf{Blockchain:}
-  Ethereum, Hyperliquid, Polkadot SDK, EIP-712, Cryptographic Signing, AWS KMS
+  Ethereum, Hyperliquid, Polkadot SDK, EIP-712, Cryptographic Signing
 }
 
 \section{Professional Experience}
@@ -134,18 +134,19 @@
 %     \end{itemize}
 % }}
 \customcventry{10/2025 ‐
-now }{{\color{blue}\href{https://coinroutes.com/en/}{(CoinRoutes)}}}{Rust Trading Infrastructure Engineer,}{Remote}{} {{
+now }{{\color{blue}\href{https://coinroutes.com/en/}{(CoinRoutes)}}}{Rust Trading Infrastructure Engineer,}{Dubai}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
-      \item Contributed to the migration of a multi-exchange order gateway from Python to Rust as part of a team modernizing core trading infrastructure.
-      \item Developed and maintained exchange adapters in Rust using Tokio, Reqwest, and Tokio-Tungstenite for centralized and decentralized exchanges including Hyperliquid.
-      \item Designed strongly typed Rust data models and serialization layers using Serde for REST and WebSocket APIs, replacing dynamically typed Python implementations.
-      \item Helped replace TCP/WebSocket JSON communication between internal trading services with Unix Domain Sockets and Protocol Buffers, significantly reducing serialization and networking overhead.
+        \vspace{0.6em}
+      \item Built middleware services enabling Web2-style API access to Hyperliquid exchange by handling web3 signing, API-key authentication, vault management, market data subscription multiplexing, and upstream connection pooling.
+      \item Improved TCP/WebSocket JSON communication between internal trading services with Unix Domain Sockets and Protocol Buffers, significantly reducing serialization and networking overhead.
+      \item Built and maintained Hyperliquid exchange adapter, including REST and WebSocket, protocol integration, custom message handling, and production testing.
       \item Implemented exchange connectivity features including authentication, request validation, subscription management, reconnection handling, and proxy-aware WebSocket networking.
       \item Added HTTP CONNECT proxy support for WebSocket connections, enabling scalable upstream connectivity and rate-limit management across exchange integrations.
-      \item Contributed to reusable exchange abstractions using Rust traits and generics, eliminating inheritance-heavy adapter implementations previously used in Python.
-      \item Owned development and maintenance of the Hyperliquid exchange adapter, including REST and WebSocket protocol integration, custom message handling, and production testing.
-      \item Built middleware services enabling Web2-style API access to Hyperliquid by handling transaction resigning, API-key authentication, vault management, subscription multiplexing, and upstream connection pooling.
+      \item worked on the migration of a multi-exchange order gateway from Python to Rust as part of modernizing core trading infrastructure.
+      \item built reusable exchange abstractions using Rust traits and generics, eliminating inheritance-heavy adapter implementations previously used in Python.
       \item Worked with Protocol Buffers, gRPC, and Rust-Python interoperability technologies used throughout trading infrastructure systems.
+      \item Developed and maintained exchange adapters in Rust using Tokio, Reqwest, and Tokio-Tungstenite for centralized and decentralized exchanges including Hyperliquid.
+      \item Designed strongly typed Rust data models and serialization layers using Serde for REST and WebSocket APIs, replacing dynamically typed Python implementations.
     \end{itemize}
 }}
 \clearpage
@@ -153,9 +154,10 @@ now }{{\color{blue}\href{https://coinroutes.com/en/}{(CoinRoutes)}}}{Rust Tradin
 \customcventry{09/2024 ‐
 09/2025}{{\color{blue}\href{https://detee.ltd/}{(DeTee)}}}{Rust Developer,}{Remote}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+        \vspace{0.6em}
       \item Core development of {\color{blue}\href{https://gitea.detee.cloud/general/detee-sgx}{detee-sgx}}, focusing on SGX enclave interactions, attestation, and protocol-level engineering..
       \item Extended RustTls for custom X.509 certificate validation with embedded Intel SGX quote verification using a custom OID for remote attestation over TLS.
-      \item Built gRPC service using Rust Tonic with shared ProtoBuff crate for client and server.
+      \item Built gRPC service with Rust Tonic with shared ProtoBuff crate for client and server.
       \item Integrated Rust FFI bindings to C/C++ libraries, enabling seamless interoperability between Rust and low-level native components..
       \item Implemented AES-based data encryption for secure storage and transmission within confidential computing environments.
       \item Studied and applied X.509 RFC specifications, ensuring standards-compliant integration of enclave attestation data.
@@ -167,6 +169,7 @@ now }{{\color{blue}\href{https://coinroutes.com/en/}{(CoinRoutes)}}}{Rust Tradin
 08/2024}{{\color{blue}\href{https://gnginfotech.com/}{(GnG
 Innovations)}}}{Software Developer,}{Dubai, UAE}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+        \vspace{0.6em}
       \item Developed real-time WebSocket chat system using Node.js
         with Socket.IO for seamless communication.
       \item Designed and implemented backend APIs using Node.js with
@@ -192,6 +195,7 @@ Innovations)}}}{Software Developer,}{Dubai, UAE}{} {{
 10/2022}{{\color{blue}\href{https://linkdot.xyz/}{(LinkDot.xyz)}}}{Blockchain
 Developer,}{Banglore, IN}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+        \vspace{0.6em}
       \item Joined LinkDot.xyz as the sole blockchain developer,
         rearchitected the entire product for maximum
         decentralization, and implemented ERC721 contracts using Solidity.
@@ -206,6 +210,7 @@ Developer,}{Banglore, IN}{} {{
 \customcventry{11/2020 ‐ 04/2021}{\color{blue}(MediSheets)}{Backend
 Developer,}{Kerala, IN}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+        \vspace{0.6em}
       \item Worked as a Backend Developer at Medisheets, a startup
         addressing supply chain issues in the pharmaceutical industry.
       \item Built REST endpoints according to specifications with
@@ -222,6 +227,7 @@ Developer,}{Kerala, IN}{} {{
 \customcventry{05/2021 ‐ 05/2022}{{{Freelancer}}}{Application
 Deployment,}{Kerala , IN}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+        \vspace{0.6em}
       \item Acquired extensive knowledge of Linux CLI and secure
         deployment best practices to ensure robust hosting environments.
       \item Provided guidance on optimizing server performance and
