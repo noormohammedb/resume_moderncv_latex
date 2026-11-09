@@ -56,7 +56,7 @@
 % \begin{center}\textbf{Rust Developer}
 % \end{center}
 \begin{center}
-  \textbf{Rust Trading Infrastructure Engineer}
+  \textbf{Rust Software Engineer}
 \end{center}
 \begin{center}
   \begin{tabular}{ c c c }
@@ -77,8 +77,10 @@
 
 \section{Summary}
 {
+  Rust software engineer with four years of backend and systems programming experience. I build async network services and gRPC APIs with Tokio, Tonic and Axum, and I'm comfortable going down to protocols, TLS and C FFI when the problem needs it. At CoinRoutes I migrate multi-exchange order gateways from Python to Rust, and built a Hyperliquid middleware that exposes Hyperliquid through a Web2-style API, handling the web3 signing for clients. Before that, at DeTee, I worked on SGX remote attestation over mTLS, plus the gRPC services and CLI around it.
   % I'm a Backend and systems engineer with 3 years of experience specializing in Rust, low-level systems and  blockchain development. Proven experience designing secure systems at the protocol level, integrated Intel SGX attestation, and building robust infrastructure using gRPC, Rust FFI, and AES encryption. Developed production-grade tooling like detee-cli and contributed to trusted execution environments through projects like detee-sgx and Occlum runtime extensions. Strong foundation in Web3, Polkadot SDK, and full-stack development (MERN), with a track record of winning blockchain hackathons and delivering scalable backend systems.
-  Backend and systems engineer with experience building low-latency trading infrastructure, exchange connectivity systems, and high-performance backend services in Rust. Worked on the migration of a multi-exchange crypto trading platform from Python to Rust, including exchange adapters, protocol serialization, and inter-process communication optimizations. Experienced with WebSocket and FIX-based exchange connectivity, Protocol Buffers, Tokio, gRPC, and distributed systems. Deep understanding of smart order routing, blockchain protocols, and cryptographic signing and encryption systems. Earlier worked on Intel SGX remote attestation, custom X.509 certificate validation, Rust FFI, and confidential computing infrastructure.
+
+  % Backend and systems engineer with experience building low-latency trading infrastructure, exchange connectivity systems, and high-performance backend services in Rust. Worked on the migration of a multi-exchange crypto trading platform from Python to Rust, including exchange adapters, protocol serialization, and inter-process communication optimizations. Experienced with WebSocket and FIX-based exchange connectivity, Protocol Buffers, Tokio, gRPC, and distributed systems. Deep understanding of smart order routing, blockchain protocols, and cryptographic signing and encryption systems. Earlier worked on Intel SGX remote attestation, custom X.509 certificate validation, Rust FFI, and confidential computing infrastructure.
 }
 % {I am a passionate blockchain developer with over two years of
 %   experience in full-stack development. Recently graduated from the
@@ -101,13 +103,13 @@
 
   \vspace{2mm}
 
-  \textbf{Trading Infrastructure:}
-  Exchange Connectivity, FIX Protocol, Smart Order Routing, Order Management Systems, WebSocket APIs, Protocol Buffers
+  % \textbf{Trading Infrastructure:}
+  % Exchange Connectivity, FIX Protocol, Smart Order Routing, Order Management Systems, WebSocket APIs, Protocol Buffers
 
   \vspace{2mm}
 
   \textbf{Rust Ecosystem:}
-  Tokio, Tonic, Prost, Axum, Rustls, Serde, Tokio-Tungstenite, Reqwest, DashMap, Moka
+  Tokio, Tonic, Prost, Axum, Rustls, Serde, Tokio-Tungstenite, Reqwest %, DashMap, Moka
 
   \vspace{2mm}
 
@@ -134,36 +136,37 @@
 %     \end{itemize}
 % }}
 \customcventry{10/2025 ‐
-now }{{\color{blue}\href{https://coinroutes.com/en/}{(CoinRoutes)}}}{Rust Trading Infrastructure Engineer,}{Dubai}{} {{
+now }{{\color{blue}\href{https://coinroutes.com/en/}{(CoinRoutes)}}}{Rust Developer,}{Dubai, UAE}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
         \vspace{0.6em}
       \item Built middleware services enabling Web2-style API access to Hyperliquid exchange by handling web3 signing, API-key authentication, vault management, market data subscription multiplexing, and upstream connection pooling.
       \item Improved TCP/WebSocket JSON communication between internal trading services with Unix Domain Sockets and Protocol Buffers, significantly reducing serialization and networking overhead.
-      \item Built and maintained Hyperliquid exchange adapter, including REST and WebSocket, protocol integration, custom message handling, and production testing.
+        % \item Built and maintained Hyperliquid exchange adapter, including REST and WebSocket, protocol integration, custom message handling, and production testing.
       \item Implemented exchange connectivity features including authentication, request validation, subscription management, reconnection handling, and proxy-aware WebSocket networking.
       \item Added HTTP CONNECT proxy support for WebSocket connections, enabling scalable upstream connectivity and rate-limit management across exchange integrations.
-      \item worked on the migration of a multi-exchange order gateway from Python to Rust as part of modernizing core trading infrastructure.
-      \item built reusable exchange abstractions using Rust traits and generics, eliminating inheritance-heavy adapter implementations previously used in Python.
+      \item Worked on the migration of a multi-exchange order gateway from Python to Rust as part of modernizing core trading infrastructure.
+      \item Built reusable exchange abstractions using Rust traits and generics, eliminating inheritance-heavy adapter implementations previously used in Python.
       \item Worked with Protocol Buffers, gRPC, and Rust-Python interoperability technologies used throughout trading infrastructure systems.
       \item Developed and maintained exchange adapters in Rust using Tokio, Reqwest, and Tokio-Tungstenite for centralized and decentralized exchanges including Hyperliquid.
       \item Designed strongly typed Rust data models and serialization layers using Serde for REST and WebSocket APIs, replacing dynamically typed Python implementations.
     \end{itemize}
 }}
-\clearpage
 
 \customcventry{09/2024 ‐
 09/2025}{{\color{blue}\href{https://detee.ltd/}{(DeTee)}}}{Rust Developer,}{Remote}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
         \vspace{0.6em}
-      \item Core development of {\color{blue}\href{https://gitea.detee.cloud/general/detee-sgx}{detee-sgx}}, focusing on SGX enclave interactions, attestation, and protocol-level engineering..
-      \item Extended RustTls for custom X.509 certificate validation with embedded Intel SGX quote verification using a custom OID for remote attestation over TLS.
+      \item Core development of {\color{blue}\href{https://gitea.detee.cloud/general/detee-sgx}{detee-sgx}}, focusing on SGX enclave interactions, attestation, and protocol-level engineering.
+      \item Extended rustls with custom X.509 certificate validation that verifies an embedded Intel SGX quote (custom OID), enabling remote attestation over TLS, implemented against the X.509 RFCs.
       \item Built gRPC service with Rust Tonic with shared ProtoBuff crate for client and server.
-      \item Integrated Rust FFI bindings to C/C++ libraries, enabling seamless interoperability between Rust and low-level native components..
+      \item Wrote Rust FFI bindings to C/C++ libraries to integrate low-level native components.
       \item Implemented AES-based data encryption for secure storage and transmission within confidential computing environments.
-      \item Studied and applied X.509 RFC specifications, ensuring standards-compliant integration of enclave attestation data.
-      \item Built detee-cli, a command-line interface using clap and gRPC, enabling seamless interaction with backend services.
+        % \item Dig into X.509 RFC specification and making sure standards compliant integration of enclave attestation data.
+      \item Built detee-cli, a command-line interface using clap and gRPC, enabling perfect interaction with backend services.
     \end{itemize}
 }}
+
+\clearpage
 
 \customcventry{06/2022 ‐
 08/2024}{{\color{blue}\href{https://gnginfotech.com/}{(GnG
@@ -173,7 +176,7 @@ Innovations)}}}{Software Developer,}{Dubai, UAE}{} {{
       \item Developed real-time WebSocket chat system using Node.js
         with Socket.IO for seamless communication.
       \item Designed and implemented backend APIs using Node.js with
-        TypeScript, ensuring efficient data flow and processing.
+        TypeScript, assuring efficient data flow and processing.
       \item Developed backend systems in Rust using SQLx for
         migrations, Tokio for asynchronous programming, and Axum for
         web APIs. Integrated SMTP for email functionality and managed
@@ -225,7 +228,7 @@ Developer,}{Kerala, IN}{} {{
 }}
 
 \customcventry{05/2021 ‐ 05/2022}{{{Freelancer}}}{Application
-Deployment,}{Kerala , IN}{} {{
+Deployment,}{Kerala, IN}{} {{
     \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
         \vspace{0.6em}
       \item Acquired extensive knowledge of Linux CLI and secure
@@ -238,13 +241,13 @@ Deployment,}{Kerala , IN}{} {{
         deployment, including setting up SSH access, configuring
         firewalls with UFW, implementing intrusion detection with
         Fail2ban, and managing SSL certificates with Certbot.
-      \item Leveraged expertise to assist peers in deploying their
-        applications securely and efficiently on raw Linux servers,
+      \item utilized expertise to assist peers in deploying their
+        applications securely and perfectly on raw Linux servers,
         including AWS EC2 instances and other VPS providers.
     \end{itemize}
 }}
 
-\clearpage
+% \clearpage
 
 \section{Personal Projects}
 \begin{itemize}[label=\textbullet]
@@ -320,17 +323,17 @@ Deployment,}{Kerala , IN}{} {{
       document storage, and was built with React, Web3.js, Ganache,
       and Truffle Suite.
 
-    \item Open Source Contribution -
-      \underline{
-        \color{blue}\href{https://github.com/macvk/dnsleaktest}{dnsleaktest}
-      }
-      \newline Converted "go version"
-      api calls of dnsleaktest cli tool to
-      asynchronous method using goroutine.
-      \underline{
-        \color{blue}\href{https://github.com/macvk/dnsleaktest/pull/12}{Github
-        PR}
-      }
+      % \item Open Source Contribution -
+      %   \underline{
+      %     \color{blue}\href{https://github.com/macvk/dnsleaktest}{dnsleaktest}
+      %   }
+      %   \newline Converted "go version"
+      %   api calls of dnsleaktest cli tool to
+      %   asynchronous method using goroutine.
+      %   \underline{
+      %     \color{blue}\href{https://github.com/macvk/dnsleaktest/pull/12}{Github
+      %     PR}
+      %   }
 
   \end{itemize}
 }
@@ -338,7 +341,7 @@ Deployment,}{Kerala , IN}{} {{
 \section{Education}
 \customcventry{2019-2022}
 {\color{blue}\href{https://gpckasaragod.ac.in/} {Govt Polytechnic
-Collage Kasaragod, India}}
+College Kasaragod, India}}
 {Diploma In Computer Engineering}{Kasaragod, IN}{}{}
 {Relevant Courses:
   Data Structures, Algorithms, Operating Systems, Databases, Computer Networks,
@@ -347,7 +350,7 @@ Computer Architecture, etc.}
 \newline
 
 \customcventry{2015-2017}{{TIHSS Naimaramoola}}{High School Computer
-Science}{Kasaragod, IN}{}{}{Relevante Courses: Mathematics, Computer
+Science}{Kasaragod, IN}{}{}{Relevant Courses: Mathematics, Computer
 Science, Physics, Chemistry  etc.}
 
 % Skills Section is not required because it is already mentioned in
